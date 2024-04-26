@@ -10,6 +10,11 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-size: 100%;
+    line-height: 1.15;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html,
@@ -19,10 +24,11 @@ body {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', 'Open Sans', sans-serif;
     font-weight: 400;
     background-color: #16151a;
     -webkit-font-smoothing: antialiased;
+    margin: 0;
 }
 
 button {
@@ -231,6 +237,19 @@ body::-webkit-scrollbar-thumb {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+
+section {
+    position: relative;
+}
 
 /*==============================
 	Header
@@ -254,8 +273,8 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    /* width: 100%; */
-    /*position: relative; */
+    width: 100%;
+    position: relative;
     padding: 0 15px;
 }
 
@@ -540,7 +559,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 1200px) {
     .nav-header {
-        /* position: relative; */
+        position: relative;
         padding-left: 17.5rem;
     }
 
@@ -732,5 +751,104 @@ body::-webkit-scrollbar-thumb {
 
     .sidebar-nav {
         max-height: 100vh;
+    }
+}
+
+/* Main */
+main {
+    position: relative;
+    padding: 1.25rem 1rem 3rem;
+    margin-top: 4.5rem;
+    background-color: hotpink;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+
+}
+
+.main-title h1 {
+    position: relative;
+    color: white;
+    font-size: 1.875rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.main-title h2 {
+    position: relative;
+    color: white;
+    font-size: 1.625rem;
+    line-height: 100%;
+    margin-bottom: 0;
+    font-weight: 400;
+    display: flex;
+}
+
+.main-title h2 svg {
+    width: inherit;
+    height: auto;
+    fill: #25a56a;
+    margin-right: 0.625rem;
+}
+
+.main title h3 {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.main-title h1 a,
+.main-title h2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-title h1 a:hover,
+.main-title h2 a:hover {
+    color: #25a56a;
+}
+
+@media (min-width: 576px) {
+    .main {
+        padding: 1.25rem 1rem 3.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 1.875rem 1rem 4.375rem;
+    }
+
+    .main-title {
+        padding-top: 4.375rem;
+        margin-bottom: 0;
+    }
+
+    .main-title h1 {
+        font-size: 3rem;
+    }
+
+    .main-title h2 {
+        font-size: 1.875rem;
+    }
+
+    .main-title h2 svg {
+        width: 1.875rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin-top: 0;
+        padding: 0 1rem 4.5rem 18.5rem;
     }
 }
